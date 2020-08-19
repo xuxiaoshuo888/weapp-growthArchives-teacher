@@ -1,0 +1,19 @@
+/* pages/me/me.wxss */
+.me-img-band{
+  background-color: white;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.me-name{
+  font-size: 18px;
+  color: #333
+}
+.me-phone{
+  font-size: 14px;
+  color: #999
+}
+.me-itemband{
+  margin-top: 20px;
+}

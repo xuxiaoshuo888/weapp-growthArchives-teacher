@@ -1,0 +1,31 @@
+/* pages/class/ydb.wxss */
+.notice{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.abc{
+  font-size: 12px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(168, 182, 200, 1);
+  line-height: 17px;
+  position: fixed;
+  top: 40%;
+  right: 10%;
+  z-index: 999
+}
+.nodata{
+  text-align: center;
+  margin-top: 40%;
+  padding: 10px 15%;
+}
+.course-title{
+  padding: 20px 20px 20px 0;
+}
+.course-tag{
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  }

@@ -1,0 +1,67 @@
+<!--pages/tj/tj.wxml-->
+
+
+
+<view class="page">
+
+  <view class="page_bd">
+    <view class="weui-panel">
+      <view class="weui-panel__hd">
+        <view class="weui-flex">
+          <view bindtap="lastWeek" style="display:flex;align-items:center;">
+            <view>上一周</view>
+          </view>
+          <view class="weui-flex__item" style="text-align:center">
+            <picker range="{{_classArray}}" range-key="class_name" bindchange="onChangeClass">
+              <view>{{_classArray[_classIndex].class_name}}</view>
+              <view>{{_monday}} ~ {{_sunday}}</view>
+            </picker>
+          </view>
+          <view bindtap="nextWeek" style="display:flex;align-items:center;">
+            <view>下一周</view>
+          </view>
+        </view>
+      </view>
+     
+
+    </view>
+
+    <view class="weui-panel weui-panel_access" wx:if="{{list.length > 0}}">
+
+      <view class="table" style="margin:20px auto 20px auto;">
+       
+        <view class='tr' style="font-weight: bold;">
+          <view class="td width25 td_center">姓名</view>
+          <view class="td width60">
+            <view class="tdd2">家长授予奖章数</view>
+            <view class="border-none" style="display:flex;">
+              <view class="tdd3 width25">礼仪</view>
+              <view class="tdd3 width25">健体</view>
+              <view class="tdd3 width25">洁净</view>
+              <view class="tdd3 width25 border-none">乐学</view>
+              
+            </view>
+          </view>
+      
+          <view class="td width15 td_center">评价总次数</view>
+        </view>
+    
+          <view class="tr" wx:for="{{list}}" wx:key="cjr_id">
+            <view class="td width25">{{item.student_name}}</view>
+            <view class="td width15">{{item['礼仪']}}</view>
+            <view class="td width15">{{item['健体']}}</view>
+            <view class="td width15">{{item['洁净']}}</view>
+            <view class="td width15">{{item['乐学']}}</view>
+            <view class="td width15">{{item['礼仪'] + item['健体'] + item['洁净'] + item['乐学']}}</view>
+          </view>
+     
+      </view>
+    </view>
+    <view wx:if="{{list.length == 0}}" style="text-align:center;padding-top:200px">
+        本月没有评价数据，请选择其他月份！
+    </view>
+    
+
+  </view>
+
+</view>

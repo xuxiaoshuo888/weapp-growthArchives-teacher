@@ -1,0 +1,97 @@
+/* pages/comment/comment.wxss */
+
+.hole {
+  width: 100vw;
+  /* height: 100vh; */
+  background-color: #f0f2f6;
+  padding-top: 15px;
+  padding-bottom: 70px;
+  box-sizing: content-box;
+}
+
+.name-list {
+  background-color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #323b45;
+}
+
+.wd-img {
+  width: 146rpx;
+  height: 100rpx;
+  margin-left: 20px;
+}
+
+.pj-block {
+  padding-top: 20px;
+}
+
+.wd-checkbox {
+  background-color: white;
+  padding: 10px 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.pjbtn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 10px 30px;
+  background-color: white;
+}
+
+.warning {
+  padding: 10px 10px 30px;
+  background-color: white;
+}
+
+/* .van-radio{
+  padding-bottom:10px;height:30px;line-height:30px;
+} */
+
+.img-num-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plus-class {
+  background-color: white !important;
+}
+
+.warning-btn {
+  color: #fff !important;
+  background-color: #e64340 !important;
+}
+
+.pj-contain {
+  position: relative;
+  padding: 22px 30px;
+}
+
+.pj-contain-img {
+  width: 64rpx;
+  height: 82rpx;
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pj-contain-text {
+  padding: 6rpx 15rpx 6rpx 20rpx;
+  background-color: #41B65A;
+  color: #f4f5f9;
+  position: absolute;
+  left: 90rpx;
+  top: 9rpx;
+  z-index: 1;
+  font-size: 24rpx;
+  font-weight: normal;
+  font-family: 'Playfair Display SC';
+  border-top-right-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+  width: 220rpx;
+}

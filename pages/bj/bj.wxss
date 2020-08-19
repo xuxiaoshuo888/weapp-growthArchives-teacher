@@ -1,0 +1,10 @@
+/* pages/bj/bj.wxss */
+.value-class {
+  flex: none !important;
+}
+.van-index-anchor{
+  background-color: #f7f8fa;
+}
+.van-cell{
+  width: 92% !important;
+}

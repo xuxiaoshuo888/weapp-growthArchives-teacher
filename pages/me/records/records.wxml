@@ -1,0 +1,52 @@
+<!--pages/me/jl.wxml-->
+<view>
+  <view class="fixed-view">
+    <van-tabs active="{{ cIndex }}" bind:change="switchTab" type="line" color="#41B65A" z-index='999' sticky="{{sticky}}">
+      <van-tab title="按操作">
+      </van-tab>
+      <van-tab title="按细项">
+      </van-tab>
+    </van-tabs>
+  </view>
+
+
+  <!-- 按操作 -->
+  <view class="mb20" wx:for="{{list}}" wx:key="index" hidden="{{cIndex !== 0}}" data-item="{{item}}" bindtap="delete2">
+    <view class="name-band">
+      <view class="name">我 发布评价
+        <view class="info" style="float:right;">{{item.pjsj}}
+          <van-icon name="delete" size="40rpx" style="vertical-align: middle;" />
+        </view>
+      </view>
+
+    </view>
+    <view class="name-list">
+      <view class="title">授予</view>
+      <view class="content">
+        <text class="name-block" wx:for="{{item.studentlist}}" wx:key="stditem" wx:for-index="idx" wx:for-item="stditem">“{{stditem.user_name}}”{{idx === (item.studentlist.length - 1) ? ':' : '，'}}</text>
+      </view>
+    </view>
+    <view class="img-list">
+      <view class="img-containvieimagew" wx:for="{{item.itemlist}}" wx:key="index" wx:for-item="stdnameidx">
+       <image src="/img/pm-jz.png" mode="aspectfit" class="img-list-img"></image>
+        <text class="img-list-imgRightText" style="width:240rpx;">{{stdnameidx.name}}</text>
+        <!-- <image src="/img/{{stdnameidx.name == '礼仪' ? 'ly' : ''}}{{stdnameidx.name == '健体' ? 'jt' : ''}}{{stdnameidx.name == '洁净' ? 'jj' : ''}}{{stdnameidx.name == '乐学' ? 'lx' : ''}}{{stdnameidx.name == '警铃' && stdnameidx.bh == '1060' ? 'bell-yellow' : ''}}{{stdnameidx.name == '警铃' && stdnameidx.bh == '1061' ? 'bell-orange' : ''}}{{stdnameidx.name == '警铃' && stdnameidx.bh == '1062' ? 'bell-red' : ''}}.png"
+          mode="aspectfit" class="img-list-img"></image> -->
+      </view>
+    </view>
+
+  </view>
+
+  <view wx:if="{{cIndex === 0 && list.length == 0}}" class="nodata">暂无数据</view>
+
+
+  <!-- 安奖章 -->
+  <view class="mb20" hidden="{{cIndex !== 1}}">
+    <van-cell-group>
+      <van-cell wx:for="{{list2}}" wx:key="index" wx:for-item="item" center title="我 评价 {{item.studentname}}同学 {{item.xxwdname}}" data-item="{{item}}" label="{{item.pjsj}}" bindtap="delete">
+        <van-icon slot="right-icon" name="delete" class="custom-icon" />
+      </van-cell>
+    </van-cell-group>
+  </view>
+  <view wx:if="{{cIndex === 1 && list2.length == 0}}" class="nodata">暂无数据</view>
+</view>

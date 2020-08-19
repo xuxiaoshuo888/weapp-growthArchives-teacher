@@ -1,0 +1,60 @@
+<!-- pages/pl/pl.wxml -->
+<!-- 评价信息 -->
+<view class="pjxx">
+  <view class="name-band">
+    <view class="name">{{xm}}</view>
+    <view class="info">{{xn}}学年 {{xq == '1' ? '上' : ''}}{{xq == '2' ? '下' : ''}}学期 </view>
+    <view style="height:400rpx;margin:20rpx 20rpx;">
+      <ec-canvas style="width:400rpx;" ec="{{ ec }}"></ec-canvas>
+    </view>
+    
+  </view>
+  <view>
+    
+  </view>
+  <view class="gard-list">
+    <view class="gard" wx:for="{{list}}" wx:for-item="item" wx:key="index">
+      <!-- <view class="top">
+        <image wx:if="{{item.id == 1}}" class="top-left" src="/img/ly-sm.png" mode="aspectFit"></image>
+        <image wx:elif="{{item.id == 2}}" class="top-left" src="/img/jt-sm.png" mode="aspectFit"></image>
+        <image wx:elif="{{item.id == 3}}" class="top-left" src="/img/jj-sm.png" mode="aspectFit"></image>
+        <image wx:elif="{{item.id == 4}}" class="top-left" src="/img/lx-sm.png" mode="aspectFit"></image>
+        <view class="top-right">
+          <image src="/img/pm-jz.png" mode="aspectFit" class="jiangzhang"></image>
+          <text class="xstyle">×</text>
+          <text class="numstyle">{{item.fsmap.jiangzhangs}}</text>
+        </view>
+      </view> -->
+      <view class="mid weui-flex">
+        <view class='weui-flex__item' style="margin-top: -20px;">
+        <text class="weidu-title">{{item.name}}</text>
+          <!-- <image wx:if="{{item.id == 1}}" class="top-left" src="/img/ly-sm.png" mode="aspectFit"></image>
+          <image wx:elif="{{item.id == 2}}" class="top-left" src="/img/jt-sm.png" mode="aspectFit"></image>
+          <image wx:elif="{{item.id == 3}}" class="top-left" src="/img/jj-sm.png" mode="aspectFit"></image>
+          <image wx:elif="{{item.id == 4}}" class="top-left" src="/img/lx-sm.png" mode="aspectFit"></image> -->
+        </view>
+        <view class="weui-flex__item">
+          <image src="/img/zhuoyue-s1.png" mode="aspectFit" class="stars"></image>
+          <!-- <text class="xstyle">×</text> -->
+          <text class="numstyle">{{item.fsmap.golden}}</text>
+        </view>
+        <view class="weui-flex__item">
+          <image src="/img/chaoyue-s1.png" mode="aspectFit" class="stars"></image>
+          <!-- <text class="xstyle">×</text> -->
+          <text class="numstyle">{{item.fsmap.sliver}}</text>
+        </view>
+        <view class="weui-flex__item">
+          <image src="/img/kuayue-s1.png" mode="aspectFit" class="stars"></image>
+          <!-- <text class="xstyle">×</text> -->
+          <text class="numstyle">{{item.fsmap.copper}}</text>
+        </view>
+        <view class='weui-flex-item'>
+          <image src="/img/pm-jz1.png" mode="aspectFit" class="stars" style="width: 53rpx;"></image>
+          <!-- <text class="xstyle">×</text> -->
+          <text class="numstyle">{{item.fsmap.jiangzhangs}}</text>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{list.length == 0}}" style="text-align:center;margin-top:100px;margin-bottom:100px;">暂无数据</view>
+  </view>
+</view>

@@ -1,0 +1,30 @@
+<!--pages/bj/bj.wxml-->
+<view>
+  <view class="fixed-btn">
+  <button size="mini" bindtap="selectAll" type="primary" style="background-color:#41B65A;height: 28px;line-height: 28px;margin-right:5px;">{{isSelectAll ? '取消全选' : '全选'}}</button>
+    <!-- <button size="mini" disabled="{{!(result.length === 1)}}" bindtap="todetail" type="primary" style="background-color:#41B65A;height: 28px;line-height: 28px;margin-right:5px;">查看</button> -->
+    <button size="mini" disabled="{{!(result.length >= 1)}}" bindtap="toComment" type="primary" style="background-color:#41B65A;height: 28px;line-height: 28px;">评价</button>
+  </view>
+  <van-index-bar highlight-color="#41B65A" style="height:80vh;" scroll-top="{{ scrollTop }}" sticky>
+    <van-checkbox-group value="{{ result }}" bind:change="onChange">
+      <view wx:for="{{list_txl}}" wx:key="index" wx:for-item="item">
+        <van-index-anchor index="{{item.alphbet}}" />
+
+        <van-cell-group>
+          <van-cell wx:for="{{ item.list }}" wx:for-item="std" wx:key="index" value-class="value-class" clickable data-index="{{ index }}"  data-stdid="{{std.id}}" data-stdname="{{std.userName}}" bind:click="toggle">
+            <view slot="title">
+            
+            <!-- style="{{(std.bellFlag && std.bellFlag == true) ? 'color:red;' : '' }}" -->
+              <view class="van-cell-text">
+                {{ std.userName }} 
+                <!-- <image wx:if="{{std.bellFlag && std.bellFlag == true}}" src="/img/bell-1.png" mode="aspectFit" style="width:14px;height:17px;vertical-align: middle;"></image> -->
+              </view>
+            </view>
+            <van-checkbox catch:tap="noop" style="display:inline-block;" class="checkboxes-{{ std.id }}" name="{{ std.id }}" checked-color="#41B65A" />
+          </van-cell>
+        </van-cell-group>
+
+      </view>
+    </van-checkbox-group>
+  </van-index-bar>
+</view>

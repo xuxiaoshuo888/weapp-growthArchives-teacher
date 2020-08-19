@@ -1,0 +1,23 @@
+<!--pages/txl/txl.wxml-->
+<view style="background-color:#F4F5F9;">
+  <view style="padding:32rpx 0;">
+    <van-cell-group style="background-color:rgba(255,255,255,0);">
+      <van-cell bindtap="scanCode" is-link size="large">
+        <view slot="title">
+          <image class='list-icon' src="/img/qrcode.png"></image>
+          <text class="van-cell-text">快捷扫码</text>
+        </view>
+      </van-cell>
+    </van-cell-group>
+  </view>
+  <view wx:if="{{list.length == 0}}" class="nodata">没有查询到您的带班信息，请联系管理员</view>
+  <!-- <view class="abc">如果您看不到带班信息，请联系管理员</view> -->
+  <van-cell-group style="background-color:rgba(255,255,255,0);">
+    <van-cell wx:for="{{list}}" wx:key="index" wx:for-item="item" data-id="{{item.id}}" bindtap="toBj" is-link size="large">
+      <view slot="title">
+        <image class='list-icon' src="/img/class.png"></image>
+        <text class="van-cell-text">{{item.class_name}}</text>
+      </view>
+    </van-cell>
+  </van-cell-group>
+</view>

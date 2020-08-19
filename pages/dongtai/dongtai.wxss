@@ -1,0 +1,125 @@
+/* pages/dongtai/dongtai.wxss */
+
+.pjxx {
+  padding-top: 16px;
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: #f4f5f9;
+}
+
+.name-band {
+  /* height: 63px; */
+  padding: 10px 30px;
+  background: rgba(255, 255, 255, 1);
+}
+
+.name {
+  font-size: 16px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(37, 37, 37, 1);
+  line-height: 22px;
+  margin-bottom: 5px;
+}
+
+.info {
+  font-size: 12px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(168, 182, 200, 1);
+  line-height: 17px;
+}
+
+.name-list {
+  border-top: 1px solid #f4f5f9;
+  border-bottom: 1px solid #f4f5f9;
+  padding: 10px 30px;
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: top;
+}
+
+.title {
+  font-size: 12px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(168, 182, 200, 1);
+  line-height: 17px;
+  width: 39px;
+}
+
+.content {
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(50, 59, 69, 1);
+  line-height: 20px;
+  letter-spacing: 1px;
+  flex: 1;
+}
+
+.name-block {
+  display: inline-block;
+}
+
+.img-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: white;
+  padding: 22px 30px;
+}
+
+.img-list-img {
+  width: 64rpx;
+  height: 82rpx;
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.img-list-imgRightText {
+  padding: 6rpx 15rpx 6rpx 20rpx;
+  background-color: #41B65A;
+  color: #f4f5f9;
+  position: absolute;
+  left: 49rpx;
+  top: 9rpx;
+  z-index: 1;
+  font-size: 24rpx;
+  font-weight: normal;
+  font-family: 'Playfair Display SC';
+  border-top-right-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.img-containview {
+  width: 450rpx;
+  height: 82rpx;
+  margin-right: 10rpx;
+  position: relative;
+}
+
+.nodata {
+  text-align: center;
+  margin-top: 40%;
+}
+
+.numstyle {
+  font-size: 20px;
+  font-weight: normal;
+  font-family: 'Playfair Display SC';
+  font-style: italic;
+  color: rgba(50, 59, 69, 1);
+  line-height: 19px;
+  letter-spacing: 1px;
+  margin-left: 20px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+}

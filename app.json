@@ -1,0 +1,87 @@
+{
+  "usingComponents": {
+    "van-cell": "./miniprogram_npm/@vant/weapp/cell/index",
+    "van-cell-group": "./miniprogram_npm/@vant/weapp/cell-group/index",
+    "van-nav-bar": "./miniprogram_npm/@vant/weapp/nav-bar/index",
+    "van-button": "./miniprogram_npm/@vant/weapp/button/index",
+    "van-checkbox": "./miniprogram_npm/@vant/weapp/checkbox/index",
+    "van-checkbox-group": "./miniprogram_npm/@vant/weapp/checkbox-group/index",
+    "van-radio": "./miniprogram_npm/@vant/weapp/radio/index",
+    "van-radio-group": "./miniprogram_npm/@vant/weapp/radio-group/index",
+    "van-submit-bar": "./miniprogram_npm/@vant/weapp/submit-bar/index",
+    "van-field": "./miniprogram_npm/@vant/weapp/field/index",
+    "van-tag": "./miniprogram_npm/@vant/weapp/tag/index",
+    "van-tab": "./miniprogram_npm/@vant/weapp/tab/index",
+    "van-tabs": "./miniprogram_npm/@vant/weapp/tabs/index",
+    "van-index-bar": "./miniprogram_npm/@vant/weapp/index-bar/index",
+    "van-index-anchor": "./miniprogram_npm/@vant/weapp/index-anchor/index",
+    "van-notice-bar": "./miniprogram_npm/@vant/weapp/notice-bar/index",
+    "van-stepper": "./miniprogram_npm/@vant/weapp/stepper/index",
+    "van-row": "./miniprogram_npm/@vant/weapp/row/index",
+    "van-col": "./miniprogram_npm/@vant/weapp/col/index",
+    "van-icon": "./miniprogram_npm/@vant/weapp/icon/index",
+    "van-popup": "./miniprogram_npm/@vant/weapp/popup/index",
+    "van-swipe-cell": "./miniprogram_npm/@vant/weapp/swipe-cell/index",
+    "van-progress": "./miniprogram_npm/@vant/weapp/progress/index"
+  },
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/txl/txl",
+    "pages/bj/bj",
+    "pages/logs/logs",
+    "pages/me/me",
+    "pages/pl/pl",
+    "pages/comment/comment",
+    "pages/dongtai/dongtai",
+    "pages/record/record",
+    "pages/range/range",
+    "pages/class/ydb",
+    "pages/class/kdb",
+    "pages/me/tongji/jiaoshi_week/jiaoshi_week",
+    "pages/me/tongji/jiaoshi_month/jiaoshi_month",
+    "pages/me/tongji/jiazhang_week/jiazhang_week",
+    "pages/me/records/records",
+    "pages/me/blacklist/blacklist",
+    "pages/me/tongji/banji_month/banji_month",
+    "pages/me/tongji/banji_term/banji_term"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#41B65A",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#41B65A"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#41B65A",
+    "list": [
+      {
+        "pagePath": "pages/txl/txl",
+        "text": "评价",
+        "iconPath": "img/pj1.png",
+        "selectedIconPath": "img/pj2.png"
+      },
+      {
+        "pagePath": "pages/dongtai/dongtai",
+        "text": "动态",
+        "iconPath": "img/dt1.png",
+        "selectedIconPath": "img/dt2.png"
+      },
+      {
+        "pagePath": "pages/range/range",
+        "text": "排行",
+        "iconPath": "img/tj1.png",
+        "selectedIconPath": "img/tj2.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "img/me1.png",
+        "selectedIconPath": "img/me2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

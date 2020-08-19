@@ -1,0 +1,31 @@
+<!--pages/comment/comment.wxml-->
+<view class="hole demo-checkbox">
+	<view class="name-list">
+		<text style="font-size: 12px;color: #A8B6C8;">授予  </text>
+		<text wx:for="{{namelist}}" wx:key="index" style="margin-right:5px;">"{{item}}"{{index === (namelist.length - 1) ? ':' : '，'}}</text>
+	</view>
+	<!-- <view class="warning">
+    <button type="warn" class="warning-btn" style="width:100%;" size="large" bindtap=""><van-icon name="volume-o" />开启小警铃</button>  
+  </view> -->
+	<view class="pj-block" wx:for="{{optionsList}}" wx:key="index" wx:for-index="idx">
+		<view class="img-num-flex">
+			<view class="pj-contain">
+				<image mode="aspectFit" class="wd-img pj-contain-img" src="/img/pm-jz.png"></image>
+				<text class="pj-contain-text">{{item.dimensionality.name}}</text>
+			</view>
+			<van-stepper wx:if="{{item.dimensionality.name !== '警铃'}}" value="{{result[idx].num}}" step="1" min="1" disabled="{{result[idx].num ==0 || result[idx].id == ''}}" style="margin-right:20rpx;" integer data-index="{{idx}}" bind:change="onchangeNum" plus-class="plus-class" minus-class="plus-class" input-class="plus-class" />
+
+		</view>
+		<view class="wd-checkbox">
+			<van-radio-group value="{{ result[idx].id }}" data-m="{{ result[idx] }}" data-index="{{idx}}" bind:change="onChange">
+				<van-radio style="padding-bottom:10px;height:30px;line-height:30px;" wx:for="{{item.schoolList}}" wx:key="index" wx:for-item="opt" data-id="{{opt.id}}" class="myradio-{{opt.id}}" checked-color="#41B65A" name="{{opt.id}}">
+					<view style="height:30px;line-height:30px;">{{opt.name}}</view>
+				</van-radio>
+			</van-radio-group>
+		</view>
+	</view>
+	<view style="height:100px;background-color:#f0f2f6"></view>
+	<view class="pjbtn">
+		<button class="btn-theme-color" style="width:100%;" size="large" bindtap="comfirm">授予</button>
+	</view>
+</view>

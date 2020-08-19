@@ -1,0 +1,16 @@
+<!--pages/me/blacklist/blacklist.wxml-->
+
+<view class="page">
+ 
+  <view class="page__bd">
+    <view class="weui-cells__title" wx:if="{{blacklist.length > 0}}">目前已被您禁止评价的学生</view>
+    <view class="weui-cells__title" wx:if="{{blacklist.length == 0}}">目前没有您禁止评价的学生</view>
+    <van-swipe-cell right-width="{{ 65 }}" async-close bind:close="onRemove" wx:for="{{blacklist}}"  data-index="{{index}}">
+      <van-cell-group>
+        <van-cell title="{{item.student_xm}}" value="{{item.class_name}}"/>
+      </van-cell-group>
+      <view slot="right">移除</view>
+    </van-swipe-cell>
+
+  </view>
+</view>

@@ -1,0 +1,23 @@
+<!--pages/me/tongji/banji_month/banji_month.wxml-->
+<view class="fixed-view">
+	<van-tabs active="{{ dimensionalityId }}" bind:change="onChange" sticky="{{T}}" color="#41B65A" ellipsis="{{F}}">
+		<van-tab title="全部" name="-1"></van-tab>
+		<van-tab wx:for="{{weiduList}}" wx:key="index" title="{{item.name}}" name="{{item.id}}"></van-tab>
+	</van-tabs>
+	<view style="text-align:center;padding:20px 10px">
+		<picker bindchange="chooseMonth" mode='date' fields='month'>
+			<view class="pad20">
+				{{year}}年{{month}}月 ▼
+			</view>
+		</picker>
+	</view>
+
+	<view class="flex-contain" wx:for="{{banji_list}}" wx:key="index">
+		<view class="flex-contain-left">
+		{{item.class_name}}:
+		</view>
+		<view class="flex-contain-right">
+			<van-progress percentage="{{item.percent}}" pivot-text="{{item.growths}}" stroke-width="8" pivot-color="#41B65A" color="#41B65A" />
+		</view>
+	</view>
+</view>

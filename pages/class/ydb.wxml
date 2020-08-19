@@ -1,0 +1,64 @@
+<!--pages/class/ydb.wxml-->
+<view>
+  <view style="background-color:#F4F5F9;">
+    <view style="padding:32rpx 0;">
+      <van-cell-group style="background-color:rgba(255,255,255,0);">
+        <van-cell bindtap="showAdd" is-link size="large">
+          <view slot="title">
+            <image class='list-icon' src="/img/add.png"></image>
+            <text class="van-cell-text">添加班级</text>
+          </view>
+        </van-cell>
+      </van-cell-group>
+    </view>
+    <view wx:if="{{list_ydb.length == 0}}" class="nodata">没有查询到您的带班信息，请联系管理员</view>
+    <!-- <view class="abc">如果您看不到带班信息，请联系管理员</view> -->
+    <van-cell-group style="background-color:rgba(255,255,255,0);">
+      <van-cell wx:for="{{list_ydb}}" wx:key="index" wx:for-item="item" data-id="{{item.id}}" data-tid="{{item.teacherclassid}}"  bindtap="" size="large">
+        <view slot="title">
+          <image class='list-icon' src="/img/class.png"></image>
+          <text class="van-cell-text">{{item.class_name}}</text>
+        </view>
+        <view slot="right-icon">
+          <van-icon bind:click="showCourse" name="edit" data-id="{{item.id}}" color="#41B65A" size="40rpx" style="margin-right:15px;" />
+          <van-icon bind:click="confirmDeleteClass" data-id="{{item.teacherclassid}}" name="delete" color="#41B65A" size="40rpx" />
+        </view>
+      </van-cell>
+    </van-cell-group>
+  </view>
+  <!-- 修改课程信息 -->
+  <van-popup show="{{ isPopShow }}" position="right" close-on-click-overlay='{{clickOverlayClose}}' safe-area-inset-top custom-style="width:70%;height:100%;" round closeable close-icon-position="top-left" bind:close="onClose">
+    <scroll-view scroll-y style="height:100%;padding:30px 10px 0 30px;box-sizing: border-box;">
+      <view class="course-title">该班级已有课程</view>
+      <view wx:for="{{course_choosen}}" wx:key='index' bindtap="deleteCourse" data-courseid="{{item.id}}" data-status="{{item.status}}" class="course-tag">
+        <van-tag size="large" type="{{item.status == '1' ? 'success' : 'warning'}}">
+          {{item.short_name}}
+          <van-icon name="delete" wx:if="{{item.status == '1'}}" style="margin-left:5px;" />
+        </van-tag>
+      </view>
+      <view class="course-title">该班级可选课程</view>
+      <view wx:for="{{course_unchoosen}}" wx:key='index' bindtap="addCourse" data-courseid="{{item.id}}" data-status="{{item.status}}" class="course-tag">
+        <van-tag size="large" type="success">{{item.short_name}}
+          <van-icon name="plus" style="margin-left:5px;" />
+        </van-tag>
+      </view>
+    </scroll-view>
+  </van-popup>
+
+  <!-- 增加班级 -->
+  <van-popup show="{{ isPopShow2 }}" position="bottom" close-on-click-overlay='{{clickOverlayClose}}' safe-area-inset-top custom-style="height:500px;" round closeable close-icon-position="top-right" bind:close="onClose2" z-index="999">
+    <scroll-view scroll-y style="height:450px;padding-top:50px;">
+      <van-cell-group style="background-color:rgba(255,255,255,0);">
+        <van-cell wx:for="{{list_wdb}}" wx:key="index" wx:for-item="item" data-id="{{item.id}}" bindtap="add" size="large">
+          <view slot="title">
+            <image class='list-icon' src="/img/class.png"></image>
+            <text class="van-cell-text">{{item.class_name}}</text>
+          </view>
+          <view slot="right-icon">
+            <van-icon name="add" color="#41B65A" size="40rpx" />
+          </view>
+        </van-cell>
+      </van-cell-group>
+    </scroll-view>
+  </van-popup>
+</view>

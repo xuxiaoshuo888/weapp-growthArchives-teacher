@@ -1,0 +1,113 @@
+/* pages/pl/pl.wxss */
+
+.pjxx {
+  padding-top: 16px;
+  background-color: #f4f5f9;
+}
+
+.name-band {
+  /* height: 63px; */
+  padding: 10px 30px;
+  background: rgba(255, 255, 255, 1);
+}
+
+.name {
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(50, 59, 69, 1);
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
+.info {
+  font-size: 12px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(168, 182, 200, 1);
+  line-height: 17px;
+}
+
+.gard-list {
+  padding: 20px;
+  background-color: f4f5f9;
+}
+
+.gard {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: bottom;
+  margin-bottom: 20px;
+}
+
+.top-left {
+  width: 41px;
+  height: 37px;
+  margin-right: 20px;
+  flex-grow: 0;
+}
+
+.top-right {
+  border-bottom: 1px solid #f4f5f9;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.jiangzhang {
+  width: 24.3px;
+  height: 22.5px;
+  vertical-align: top;
+}
+
+.stars {
+  width: 84rpx;
+  height: 78rpx;
+  vertical-align: middle;
+}
+
+.numstyle {
+  font-size: 17px;
+  font-weight: normal;
+  font-family: 'Playfair Display SC';
+  font-style: italic;
+  color: rgba(50, 59, 69, 1);
+  line-height: 19px;
+  letter-spacing: 1px;
+  margin-left: 3px;
+}
+
+.xstyle {
+  font-size: 12px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(168, 182, 200, 1);
+  line-height: 17px;
+  letter-spacing: 1px;
+}
+.weidu-title{
+  position: absolute;
+  left: -20px;
+  top: -10rpx;
+  font-size: 24rpx;
+  font-weight: normal;
+  font-family: 'Playfair Display SC';
+  border-bottom-right-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+  background-color: #41B65A;
+  color: #f4f5f9;
+  width: 220rpx;
+  text-align: center;
+  padding: 6rpx 15rpx;
+
+}
+.mid.weui-flex .weui-flex__item{
+  position: relative;
+}

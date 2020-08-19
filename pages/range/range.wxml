@@ -1,0 +1,69 @@
+<!--pages/range/range.wxml-->
+<view class="">
+  <view class="fixed-view">
+    <van-tabs active="{{ dimensionalityId }}" bind:change="onChange" color="#41B65A" ellipsis="{{F}}">
+      <van-tab title="全部" name="-1"></van-tab>
+      <van-tab wx:for="{{weiduList}}" wx:key="index" title="{{item.dimensionality.name}}" name="{{item.dimensionality.id}}"></van-tab>
+    </van-tabs>
+    <view class="weui-flex">
+      <view bindtap="chooseTime" class="weui-flex__item pad20">
+        {{typeList[typeListIndex]}} ▼
+      </view>
+      <view class="weui-flex__item pad20">
+        <picker bindchange="choosenj" value="{{njIndex}}" range="{{njList}}" range-key="nj">
+          <view>{{njList[njIndex].nj}} ▼</view>
+        </picker>
+      </view>
+      <view class="weui-flex__item pad20" hidden="{{njList[njIndex].year === ''}}">
+        <picker bindchange="choosebj" value="{{bjIndex}}" range="{{bjList}}" range-key="class_name">
+          <view>{{bjList[bjIndex].class_name}} ▼</view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <view class="pm-img-contain">
+    <image src="/img/pm-bg.png" class="pm-topimg" mode="aspectFit"></image>
+    <view class="pm-img-text">
+      <text style="margin-right:20rpx;">排名时间：{{typeList[typeListIndex]}}</text> 排名范围：
+      <text wx:if="{{njList[njIndex].year === ''}}">全校</text>
+      <text wx:else>{{bjList[bjIndex].class_name}}</text>
+    </view>
+  </view>
+  <view>
+    <view class="weui-cells">
+      <view class="weui-cell" wx:for="{{list}}" wx:key="index" wx:for-index="index" data-id="{{item.studentid}}" data-name="{{item.user_name}}" bindtap="toPj">
+        <view class="pm-item">
+          <view class="pm-left">
+            <text wx:if="{{!(index == 0 || index == 1 || index == 2)}}" class="index-text">{{index + 1}}</text>
+            <image wx:if="{{index === 0}}" src="/img/pm-1.png" mode="aspectFit" class="pm123"></image>
+            <image wx:if="{{index === 1}}" src="/img/pm-2.png" mode="aspectFit" class="pm123"></image>
+            <image wx:if="{{index === 2}}" src="/img/pm-3.png" mode="aspectFit" class="pm123"></image>
+            {{item.user_name}}</view>
+          <view class="pm-right weui-flex">
+            <view class="weui-flex__item abc" hidden="{{typeListIndex !== 2}}">
+              <image src="/img/zhuoyue-s1.png" mode="aspectFit" class="pm-star"></image>
+              <text class="pm-jz-num">{{item.fsmap.golden}}</text>
+            </view>
+            <view class="weui-flex__item abc" hidden="{{typeListIndex !== 2}}">
+              <image src="/img/chaoyue-s1.png" mode="aspectFit" class="pm-star"></image>
+              <text class="pm-jz-num">{{item.fsmap.sliver}}</text>
+            </view>
+            <view class="weui-flex__item abc" hidden="{{typeListIndex !== 2}}">
+              <image src="/img/kuayue-s1.png" mode="aspectFit" class="pm-star"></image>
+              <text class="pm-jz-num">{{item.fsmap.copper}}</text>
+            </view>
+            <view class="weui-flex__item abc">
+              <image src="/img/pm-jz1.png" mode="aspectFit" class="pm-jz"></image>
+              <text class="pm-jz-num">
+                <text class="num-style" hidden="{{typeListIndex !== 2}}">{{item.fsmap.jiangzhangs}}</text>
+              <text class="num-style" hidden="{{typeListIndex === 2}}">{{item.growths}}</text></text>
+            </view>
+          </view>
+        </view>
+        <view class="weui-cell__ft">›</view>
+      </view>
+      <view class="weui-cell">
+      </view>
+    </view>
+  </view>
+</view>

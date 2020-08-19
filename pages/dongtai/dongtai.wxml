@@ -1,0 +1,35 @@
+<!--pages/dongtai/dongtai.wxml-->
+<!-- 评价记录 -->
+
+<view class="pjxx">
+<!-- <view class="weui-flex" style="padding-top:10px">
+  <button size="mini" type="{{currentType === 'week' ? 'primary' : ''}}" class="">本周</button>
+  <button size="mini" type="" class="">本学期</button>
+  <button size="mini" type="" class="">本月</button>
+  <button size="mini" type="" class="">全部</button>
+</view> -->
+  <view class="mb20" wx:for="{{list}}" wx:key="index">
+    <view class="name-band">
+      <view class="name">
+        {{item.usertype == '3'?item.studentlist[0].user_name+'的家长':item.name+'老师'}} 发布评价         <view class="info" style="float:right;">{{item.pjsj}}</view>
+      </view>
+    </view>
+    <view class="name-list">
+      <view class="title">授予</view>
+      <view class="content">
+        <text class="name-block" wx:for="{{item.studentlist}}" wx:key="stditem" wx:for-index="idx" wx:for-item="stditem">“{{stditem.user_name}}”{{idx === (item.studentlist.length - 1) ? ':' : '，'}}</text>
+      </view>
+    </view>
+    <view class="img-list" wx:for="{{item.itemlist}}" wx:key="index" wx:for-item="stdnameidx">
+      <view class="img-containview" >
+        <!-- <image src="/img/{{stdnameidx.name == '礼仪' ? 'ly' : ''}}{{stdnameidx.name == '健体' ? 'jt' : ''}}{{stdnameidx.name == '洁净' ? 'jj' : ''}}{{stdnameidx.name == '乐学' ? 'lx' : ''}}{{stdnameidx.name == '警铃' && stdnameidx.bh == '1060' ? 'bell-yellow' : ''}}{{stdnameidx.name == '警铃' && stdnameidx.bh == '1061' ? 'bell-orange' : ''}}{{stdnameidx.name == '警铃' && stdnameidx.bh == '1062' ? 'bell-red' : ''}}.png" mode="aspectfit" class="img-list-img"></image> -->
+
+        <image src="/img/pm-jz.png" mode="aspectfit" class="img-list-img"></image>
+        <text class="img-list-imgRightText">{{stdnameidx.name}}</text>
+      </view>
+      <view class="numstyle">{{stdnameidx.count}}</view>枚
+    </view>
+  </view>
+
+<view wx:if="{{list.length == 0}}" class="nodata">暂无数据</view>
+</view>

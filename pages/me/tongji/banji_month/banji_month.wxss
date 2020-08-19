@@ -1,0 +1,21 @@
+/* pages/me/tongji/banji_month/banji_month.wxss */
+.flex-contain {
+  display: flex;
+  align-self: center;
+  justify-content: flex-start;
+}
+
+.flex-contain-left {
+  flex: 0 0 150rpx;
+  font-size: 24rpx;
+  padding: 20rpx;
+}
+
+.flex-contain-right {
+  flex: 1 1 auto;
+  padding: 20rpx;
+  margin-top: 10rpx;
+}
+.flex-contain{
+  margin-top: 40rpx;
+}

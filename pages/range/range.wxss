@@ -1,0 +1,118 @@
+/* pages/range/range.wxss */
+
+.pad20 {
+  padding: 20rpx;
+  text-align: center;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(50, 59, 69, 1);
+  line-height: 40rpx;
+  letter-spacing: 2rpx;
+  background-color: white;
+}
+
+.pm-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pm-left {
+  text-align: left;
+}
+
+.pm-right {
+  min-width:350rpx; 
+  text-align: right;
+  line-height: 68rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(37, 37, 37, 1);
+  justify-content: flex-end !important;
+}
+
+.pm-topimg {
+  width: 750rpx;
+  height: 424rpx;
+}
+
+.pm-img-contain {
+  position: relative;
+  padding-top: 88px;
+}
+
+.pm-img-text {
+  color: white;
+  position: absolute;
+  bottom: 60rpx;
+  width: 100%;
+  text-align: center;
+  font-size: 34rpx;
+  font-family: YuppySC-Regular, YuppySC;
+  font-weight: 400;
+  line-height: 48rpx;
+}
+
+.fixed-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.index-text {
+  display: inline-block;
+  font-size: 23rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(168, 182, 200, 1);
+  line-height: 68rpx;
+  width: 68rpx;
+  height: 68rpx;
+  text-align: center;
+}
+
+.pm123 {
+  width: 68rpx;
+  height: 68rpx;
+  vertical-align: middle;
+}
+
+.pm-jz {
+  width: 30rpx;
+  height: 42rpx;
+  margin-right: 5rpx;
+}
+
+.pm-jz-num {
+  font-size: 22rpx;
+  font-family: PlayfairDisplay-BlackItalic, PlayfairDisplay;
+  font-weight: normal;
+  color: rgba(50, 59, 69, 1);
+  line-height: 30rpx;
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+}
+.pm-star{
+  width: 47rpx;
+  height: 45rpx;
+  display: inline-block;
+  padding-left: 5rpx;
+  margin-right: 5rpx;
+}
+.abc{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20rpx;
+}
+.num-style{
+  /* display: inline-block; */
+  width: 20px;
+  text-align: right;
+}

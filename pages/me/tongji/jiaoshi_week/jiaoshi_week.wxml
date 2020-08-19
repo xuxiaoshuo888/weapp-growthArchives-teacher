@@ -1,0 +1,82 @@
+<!--pages/tj/tj.wxml-->
+
+
+
+<view class="page">
+
+	<view class="page_bd">
+		<view class="weui-panel">
+			<view class="weui-panel__hd">
+				<view class="weui-flex">
+					<view bindtap="lastWeek">上一周</view>
+					<view class="weui-flex__item" style="text-align:center">{{_monday}} ~ {{_sunday}}</view>
+					<view bindtap="nextWeek">下一周</view>
+				</view>
+			</view>
+
+
+		</view>
+
+		<!-- <view class="weui-panel weui-panel_access" wx:if="{{list.length > 0}}">
+
+			<view class="table" style="margin:20px auto 20px auto;">
+
+				<view class='tr' style="font-weight: bold;">
+					<view class="td width25 td_center">姓名</view>
+					<view class="td width60">
+						<view class="tdd2">教师授予奖章数</view>
+						<view class="border-none" style="display:flex;">
+							<view class="tdd3 width25">礼仪</view>
+							<view class="tdd3 width25">健体</view>
+							<view class="tdd3 width25">洁净</view>
+							<view class="tdd3 width25 border-none">乐学</view>
+
+						</view>
+					</view>
+
+					<view class="td width15 td_center">评价学生数</view>
+				</view>
+
+				<view class="tr" wx:for="{{list}}" wx:key="cjr_id">
+					<view class="td width25">{{item.name}}</view>
+					<view class="td width15">{{item['礼仪']}}</view>
+					<view class="td width15">{{item['健体']}}</view>
+					<view class="td width15">{{item['洁净']}}</view>
+					<view class="td width15">{{item['乐学']}}</view>
+					<view class="td width15">{{item.xsrs}}</view>
+				</view>
+
+			</view>
+		</view> -->
+		<!-- <view wx:if="{{list.length == 0}}" style="text-align:center;padding-top:200px">
+			本月没有评价数据，请选择其他月份！
+		</view> -->
+		<!-- 新建表格 -->
+		<view style="padding:10rpx;background-color:#fff;" wx:if="{{list.length > 0}}">
+			<view style="padding:20rpx;text-align:center;">教师授予奖章数</view>
+			<view class='t-contain'>
+				<view class="t-contain-left flex-align-center write-mode-vertical">姓名</view>
+				<view class="t-contain-center">
+					<!-- <view style="padding:20rpx;">教师授予奖章数</view> -->
+					<view class="t-contain-center-weidu">
+						<view wx:for="{{weiduList}}" class="t-contain-center-weidu-item write-mode-vertical" wx:key="index">{{item.name}}</view>
+					</view>
+				</view>
+				<view class="t-contain-right flex-align-center write-mode-vertical">评价学生数</view>
+			</view>
+			<view class='t-contain' wx:for="{{list}}" wx:for-item="person" style="color:#555;padding-top:20rpx;padding-bottom:20rpx;">
+				<view class="t-contain-left">{{person.name}}</view>
+				<view class="t-contain-center">
+					<view class="t-contain-center-weidu">
+						<view wx:for="{{weiduList}}" class="t-contain-center-weidu-item t-contain-center-weidu-item-num" wx:key="index">{{person[item.name]}}</view>
+					</view>
+				</view>
+				<view class="t-contain-right">{{person.xsrs}}</view>
+			</view>
+		</view>
+		<view wx:if="{{list.length == 0}}" style="text-align:center;padding-top:200px">
+			本月没有评价数据，请选择其他月份！
+		</view>
+	</view>
+
+</view>
