@@ -139,34 +139,10 @@ Page({
       url: '/pages/class/ydb',
     })
   },
-  toPingJiaTongJi(e) { //评价统计
-    switch (e.detail.value) {
-      case '0': //教师评价按周
-        wx.navigateTo({
-          url: '/pages/me/tongji/jiaoshi_week/jiaoshi_week'
-        });
-        break;
-      case '1': //教师评价按月
-        wx.navigateTo({
-          url: '/pages/me/tongji/jiaoshi_month/jiaoshi_month'
-        });
-        break;
-      case '2': //家长评价
-        wx.navigateTo({
-          url: '/pages/me/tongji/jiazhang_week/jiazhang_week'
-        })
-        break;
-      case '3': //班级对比按月
-        wx.navigateTo({
-          url: '/pages/me/tongji/banji_month/banji_month'
-        });
-        break;
-      case '4': //班级对比按学期
-        wx.navigateTo({
-          url: '/pages/me/tongji/banji_term/banji_term'
-        });
-    }
-
+  todongtai(){
+    wx.navigateTo({
+      url: '/pages/dongtai/dongtai',
+    })
   },
   toBlacklist(e) {
     wx.navigateTo({

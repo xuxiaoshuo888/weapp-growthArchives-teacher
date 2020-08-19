@@ -1,0 +1,12 @@
+  <view class="bg1 use-page">
+  	<van-cell-group class="punish" style="background-color:rgba(255,255,255,0);">
+  		<van-cell label="{{item.subtitle}}" center wx:for="{{list}}" wx:key="index" wx:for-item="item" data-url="{{item.url}}" bindtap="toNext" is-link size="large">
+  			<view slot="title">
+  				<image class='list-icon2' src="{{item.img}}"></image>
+  				<text class="van-cell-text">{{item.name}}</text>
+  			</view>
+        <view class="punish-list-nums">{{item.nums}}</view>
+        <!-- <view slot="label">{{item.subtitle}}</view> -->
+  		</van-cell>
+  	</van-cell-group>
+  </view>

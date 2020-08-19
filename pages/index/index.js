@@ -54,7 +54,7 @@ Page({
               // app.globalData.appUserInfo.name = res.data.name
               // app.globalData.appUserInfo.xh = res.data.username
               wx.switchTab({
-                url: '/pages/txl/txl',
+                url: '/pages/tab-personEvaluate/personEvaluate',
               })
             } else {
               wx.showToast({

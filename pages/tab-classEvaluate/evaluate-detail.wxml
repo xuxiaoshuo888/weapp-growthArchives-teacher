@@ -1,0 +1,46 @@
+  <view class="bg1 use-page">
+  	<van-cell-group style="background-color:rgba(255,255,255,0);">
+  		<picker bindchange="choose" data-tag="nj" range="{{njlist}}">
+  			<van-cell bindtap="toNext" is-link size="large">
+  				<view slot="title">
+  					<text class="van-cell-text">选择年级</text>
+  				</view>
+  				<view class="choosen-text-color">{{njlist[nj]}}</view>
+  			</van-cell>
+  		</picker>
+  		<picker bindchange="choose" data-tag="bj" range="{{bjlist}}">
+  			<van-cell bindtap="toNext" is-link size="large">
+  				<view slot="title">
+  					<text class="van-cell-text">选择班级</text>
+  				</view>
+  				<view class="choosen-text-color">{{bjlist[bj]}}</view>
+  			</van-cell>
+  		</picker>
+  		<picker bindchange="choose" data-tag="week" range="{{weeklist}}">
+  			<van-cell bindtap="toNext" is-link size="large">
+  				<view slot="title">
+  					<text class="van-cell-text">选择周次</text>
+  				</view>
+  				<view class="choosen-text-color">{{weeklist[week]}}</view>
+  			</van-cell>
+  		</picker>
+  	</van-cell-group>
+  	<view class="use-page-noheight">
+  		<van-cell-group style="background-color:rgba(255,255,255,0);">
+  			<van-cell size="large">
+  				<view slot="title">
+  					<text class="van-cell-text">选择勋章</text>
+  				</view>
+  			</van-cell>
+  			<view class="weui-flex medal-list">
+  				<view class="weui-flex__item medal-list-view {{activeIndex == index ? 'active' : ''}}" hover-class="medal-list-view-hover" wx:for="{{options}}" wx:key="index" data-index="{{index}}" bindtap="toggle">
+  					<image class="medal-list-item-img" src="{{item.img}}" mode="aspectFit"></image>
+  					<text class="medal-list-item-title">行动</text>
+  				</view>
+  			</view>
+  		</van-cell-group>
+  	</view>
+  	<view class="pjbtn">
+  		<button class="btn-theme-color" style="width:100%;" size="large" bindtap="comfirm">提交打分</button>
+  	</view>
+  </view>

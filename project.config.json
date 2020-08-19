@@ -27,13 +27,13 @@
 			"outputPath": ""
 		},
 		"useIsolateContext": true,
-		"useCompilerModule": false,
+		"useCompilerModule": true,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.9.4",
 	"appid": "wx9ffdc12e1a702f5f",
-	"projectname": "xueshengpingjia",
+	"projectname": "xueshengpingjia-teacher-branch",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

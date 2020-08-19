@@ -17,12 +17,14 @@
   vertical-align: middle;
   margin-right: 5px;
 }
-.list-icon2{
+
+.list-icon2 {
   width: 20px;
   height: 20px;
   vertical-align: middle;
   margin-right: 5px;
 }
+
 .fixed-btn {
   position: fixed;
   top: 8px;
@@ -38,18 +40,108 @@
   width: 100vw;
   height: 90vh;
 }
+
 .demo-checkbox .van-checkbox {
-    margin: 5px 0!important;
+  margin: 5px 0 !important;
 }
-.btn-theme-color{
+
+.btn-theme-color {
   background-color: #41B65A;
   color: white;
 }
+
 button[disabled] {
-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.3);
 }
 
+.use-page {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  min-height: calc(100vh - 40px);
+}
 
+.use-page-noheight {
+  padding-top: 20px;
+}
+
+.choosen-text-color {
+  color: #5FCF77;
+}
+
+.medal-list {
+  padding: 20rpx 30rpx;
+  text-align: center;
+  background-color: #fff;
+}
+
+.medal-list-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.medal-list-item-img {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.medal-list-item-title {
+  font-size: 26rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: #a8b6c8;
+  line-height: 36rpx;
+  margin-top: 20rpx;
+}
+
+.medal-list-view {
+  transition: all ease-in-out 0.2s;
+}
+
+.medal-list-view-hover {
+  transform: scale(1.1);
+}
+
+.medal-list-view.active {
+  transform: scale(1.1);
+}
+
+.medal-list-view.active>text {
+  color: #252525;
+}
+
+.pjbtn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 10px 30px;
+  background-color: white;
+}
+
+.medal-list-show .van-cell-text {
+  position: relative;
+  border-left: 10rpx solid #41b65a;
+  padding-left: 20rpx;
+}
+
+.medal-list-show .medal-list-item-title {
+  color: #252525;
+}
+
+.medal-list-show .medal-list-item-score {
+  font-size: 36rpx;
+  font-family: 'Playfair Display SC';
+  font-weight: BlackItalic;
+  color: #323b45;
+  line-height: 36rpx;
+  margin-bottom: 20rpx;
+}
+.punish .punish-list-nums{
+  color:#FF1F1F;
+}
 /*字体文件*/
 @font-face {
   font-family: 'Playfair Display SC';

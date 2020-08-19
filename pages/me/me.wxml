@@ -36,14 +36,11 @@
         <text class="van-cell-text">评价记录</text>
       </view>
     </van-cell>
-    <van-cell is-link size="large">
+    <van-cell bindtap="todongtai" is-link size="large">
       <view slot="title">
-        <picker bindchange="toPingJiaTongJi" range="{{['教师评价(按周)','教师评价(按月)','家长评价','班级对比（按月）','班级对比（按学期）']}}">
-          <image class='list-icon2' mode="aspectFit" src="/img/sz.png"></image>
-          <text class="van-cell-text">评价统计</text>
-        </picker>
+        <image class='list-icon2' mode="aspectFit" src="/img/icon-2.png"></image>
+        <text class="van-cell-text">评价动态</text>
       </view>
-   
     </van-cell>
   </view>
   <view class="me-itemband">

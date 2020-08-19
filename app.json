@@ -44,7 +44,12 @@
     "pages/me/records/records",
     "pages/me/blacklist/blacklist",
     "pages/me/tongji/banji_month/banji_month",
-    "pages/me/tongji/banji_term/banji_term"
+    "pages/me/tongji/banji_term/banji_term",
+    "pages/tab-personEvaluate/personEvaluate",
+    "pages/tab-classEvaluate/classEvaluate",
+    "pages/tab-punishManage/punishManage",
+    "pages/tab-classEvaluate/evaluate-detail",
+    "pages/tab-classEvaluate/range-detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -58,20 +63,20 @@
     "selectedColor": "#41B65A",
     "list": [
       {
-        "pagePath": "pages/txl/txl",
-        "text": "评价",
+        "pagePath": "pages/tab-personEvaluate/personEvaluate",
+        "text": "个人评价",
         "iconPath": "img/pj1.png",
         "selectedIconPath": "img/pj2.png"
       },
       {
-        "pagePath": "pages/dongtai/dongtai",
-        "text": "动态",
+        "pagePath": "pages/tab-classEvaluate/classEvaluate",
+        "text": "班级评价",
         "iconPath": "img/dt1.png",
         "selectedIconPath": "img/dt2.png"
       },
       {
-        "pagePath": "pages/range/range",
-        "text": "排行",
+        "pagePath": "pages/tab-punishManage/punishManage",
+        "text": "惩罚管理",
         "iconPath": "img/tj1.png",
         "selectedIconPath": "img/tj2.png"
       },
