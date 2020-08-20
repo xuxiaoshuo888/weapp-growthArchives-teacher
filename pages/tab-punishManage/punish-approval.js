@@ -1,4 +1,4 @@
-// pages/tab-classEvaluate/evaluate-detail.js
+
 Page({
 
   /**
@@ -6,33 +6,41 @@ Page({
    */
   data: {
     njlist: ['1年级', '2年级', '3年级', '4年级', '5年级', '6年级'],
-    bjlist: ['1班', '2班', '3班', '4班', '5班', '6班', '7班', '8班', '9班', '10班'],
+    bjlist: ['全部', '未处理', '审核通过', '审核未通过'],
     weeklist: ['第一周', '第二周', '第三周', '第四周', '第五周', '第六周', '第七周', '第八周', '第九周', '第十周'],
     nj: 0,
     bj: 0,
     week: 0,
     options: [{
         title: '行动',
-        img: 'xd'
+        img: '/img/jiangzhang.png'
       },
       {
-        title: '课间',
-        img: 'kj'
+        title: '行动',
+        img: '/img/jiangzhang.png'
       },
       {
-        title: '保护',
-        img: 'bh'
+        title: '行动',
+        img: '/img/jiangzhang.png'
       },
       {
-        title: '卫生',
-        img: 'ws'
+        title: '行动',
+        img: '/img/jiangzhang.png'
       },
       {
-        title: '体检',
-        img: 'tj'
+        title: '行动',
+        img: '/img/jiangzhang.png'
       }
     ],
-    activeIndex: null
+    activeIndex: null,
+    autosize:{ maxHeight: 200, minHeight: 80 },
+    list:[
+      {name:"刘刚",id:0,bj:'一年级一班',url:"./punish-add",img:"/img/icon-student.png",status:0,reason:"打架",task:"完成古诗默写",condition:"已按照老师要求完成任务",imglist:['/img/punish-fj1.png','/img/punish-std3.png','/img/punish-fj3.png']},
+      {name:"张丽丽",id:1,bj:'二年级三班',url:"./punish-approval",img:"/img/icon-student.png",status:1,reason:"打架",task:"完成古诗默写",condition:"已按照老师要求完成任务",imglist:['/img/punish-fj1.png','/img/punish-std3.png','/img/punish-fj3.png']},
+      {name:"王智",id:1,bj:'四年级五班',url:"./punish-record",img:"/img/icon-student.png",status:2,reason:"打架",task:"完成古诗默写",condition:"已按照老师要求完成任务",imglist:['/img/punish-fj1.png','/img/punish-std3.png','/img/punish-fj3.png']}
+    ],
+    show:false,
+    autosize:{ maxHeight: 200, minHeight: 100 }
   },
 
   /**
@@ -117,5 +125,11 @@ Page({
         icon: 'none'
       })
     }, 2000)
+  },
+  toApproval(){//填写审核意见
+    console.log(333)
+    this.setData({
+      show:true
+    })
   }
 })

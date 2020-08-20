@@ -1,1 +1,13 @@
 /* pages/tab-punishManage/punishManage.wxss */
+.punish-icon{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.van-cell__title{
+  flex: 1 1 auto!important;
+}
+
+.van-cell__value{
+ flex: 0 0 auto!important;
+}

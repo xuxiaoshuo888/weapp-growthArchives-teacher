@@ -1,43 +1,39 @@
-// pages/tab-classEvaluate/range-detail.js
+// pages/tab-classEvaluate/evaluate-detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    njlist: ['2020-2021学年第一学期', '2019-2020学年第一学期', '2019-2020学年第二学期', '2018-2019学年第一学期', '2018-2019学年第二学期'],
-    bjlist: ['全部', '行动', '保护', '卫生', '体检'],
-    weeklist: ['一年级', '二年级', '三年级', '四年级', '五年级', '六年级'],
+    njlist: ['1年级', '2年级', '3年级', '4年级', '5年级', '6年级'],
+    bjlist: ['1班', '2班', '3班', '4班', '5班', '6班', '7班', '8班', '9班', '10班'],
+    weeklist: ['第一周', '第二周', '第三周', '第四周', '第五周', '第六周', '第七周', '第八周', '第九周', '第十周'],
     nj: 0,
     bj: 0,
     week: 0,
     options: [{
         title: '行动',
-        img: '/img/xd-a.png',
-        score:29
+        img: '/img/jiangzhang.png'
       },
       {
-        title: '课间',
-        img: '/img/kj-a.png',
-        score:28
+        title: '行动',
+        img: '/img/jiangzhang.png'
       },
       {
-        title: '保护',
-        img: '/img/bh-a.png',
-        score:25
+        title: '行动',
+        img: '/img/jiangzhang.png'
       },
       {
-        title: '卫生',
-        img: '/img/ws-a.png',
-        score:23
+        title: '行动',
+        img: '/img/jiangzhang.png'
       },
       {
-        title: '体检',
-        img: '/img/tj-a.png',
-        score:26
+        title: '行动',
+        img: '/img/jiangzhang.png'
       }
     ],
-    activeIndex: null
+    activeIndex: null,
+    autosize:{ maxHeight: 200, minHeight: 80 }
   },
 
   /**
@@ -109,5 +105,18 @@ Page({
     })
     console.log(e.currentTarget.dataset.index)
     console.log(this.data.activeIndex)
+  },
+  comfirm() {
+    wx.showLoading({
+      title: '提交中...',
+    })
+    setTimeout(() => {
+      wx.hideLoading()
+      wx.showToast({
+        title: '提交成功！',
+        duration: 2500,
+        icon: 'none'
+      })
+    }, 2000)
   }
 })

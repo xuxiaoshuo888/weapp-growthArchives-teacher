@@ -1,0 +1,57 @@
+  <view class="bg1 use-page">
+  	<van-cell-group style="background-color:rgba(255,255,255,0);">
+  		<picker bindchange="choose" mode="date" data-tag="date">
+  			<van-cell bindtap="toNext" is-link size="large">
+  				<view slot="title">
+  					<text class="van-cell-text">选择日期</text>
+  				</view>
+  				<view class="choosen-text-color">{{date}}</view>
+  			</van-cell>
+  		</picker>
+  		<picker bindchange="choose" data-tag="bj" range="{{bjlist}}">
+  			<van-cell bindtap="toNext" is-link size="large">
+  				<view slot="title">
+  					<text class="van-cell-text">选择类型</text>
+  				</view>
+  				<view class="choosen-text-color">{{bjlist[bj]}}</view>
+  			</van-cell>
+  		</picker>
+  	</van-cell-group>
+  	<view wx:for="{{list}}" wx:key="index" wx:for-item="item" class="use-page-noheight punish-top-border">
+  		<van-cell-group bindtap="toApproval" style="background-color:rgba(255,255,255,0);">
+  			<van-cell center size="large" class="punish-approval punish-approval-title">
+  				<view slot="title">
+  					<image class='list-icon2' src="{{item.img}}"></image>
+  					<text class="van-cell-text">{{item.name}}</text>
+  				</view>
+  				<view class="punish-approval-content">{{item.bj}}</view>
+  				<view slot="right-icon" class="punish-approval-status">
+  					<van-tag size="large" type="{{item.status == 0 ? 'primary' : ''}}{{item.status == 1 ? 'success' : ''}}{{item.status == 2 ? 'danger' : ''}}">
+  						{{item.status == 0 ? '未处理' : ''}}
+  						{{item.status == 1 ? '审核通过' : ''}}
+  						{{item.status == 2 ? '审核未通过' : ''}}
+  					</van-tag>
+  				</view>
+  			</van-cell>
+  			<van-cell class="punish-approval punish-approval-subtitle" center title="惩罚原因" size="large">
+  				<view>{{item.reason}}</view>
+  			</van-cell>
+  			<van-cell class="punish-approval punish-approval-subtitle" center title="需完成任务" size="large">
+  				<view>{{item.task}}</view>
+  			</van-cell>
+  			<van-cell class="punish-approval punish-approval-subtitle" center title="完成情况" size="large">
+  				<view>{{item.condition}}</view>
+  			</van-cell>
+  			<view class="punish-img-view">
+  				<image wx:for="{{item.imglist}}" wx:for-item="img" src="{{img}}"></image>
+  			</view>
+  		</van-cell-group>
+  	</view>
+  	<van-dialog title="审核意见" show="{{show}}" use-slot show-cancel-button 
+    confirm-button-text="通过" confirm-button-color="#41B65A" cancel-button-text="拒绝通过" cancel-button-color="#252525">
+  		<van-cell-group style="background-color:rgba(255,255,255,0);">
+  			<van-field v-model="message" rows="5"  show-word-limit maxlength="150" type="textarea" autosize="{{autosize}}" placeholder="请输入审核意见">
+  			</van-field>
+  		</van-cell-group>
+  	</van-dialog>
+  </view>

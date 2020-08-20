@@ -6,9 +6,9 @@ Page({
    */
   data: {
     list:[
-      {name:"惩罚通知",id:0,url:"./evaluate-detail",img:"/img/icon-6.png",nums:12,subtitle:'新增惩罚通知'},
-      {name:"惩罚审核",id:1,url:"./range-detail",img:"/img/icon-2.png",nums:6,subtitle:'家长提交证据，老师消除虫子'},
-      {name:"惩罚记录",id:1,url:"./range-detail",img:"/img/icon-1.png",nums:18,subtitle:'教师发布惩罚任务的记录'}
+      {name:"惩罚通知",id:0,url:"./punish-add",img:"/img/icon-bell.png",nums:12,subtitle:'新增惩罚通知'},
+      {name:"惩罚审核",id:1,url:"./punish-approval",img:"/img/icon-2.png",nums:6,subtitle:'家长提交证据，老师消除虫子'},
+      {name:"惩罚记录",id:1,url:"./punish-record",img:"/img/icon-record.png",nums:18,subtitle:'教师发布惩罚任务的记录'}
     ]
   },
 
@@ -66,5 +66,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  toNext(e){
+    wx.navigateTo({
+      url: `${e.currentTarget.dataset.url}`,
+    })
   }
 })

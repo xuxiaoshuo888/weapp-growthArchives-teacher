@@ -13,32 +13,32 @@
   </view>
   <van-cell bindtap="unbindIdentity" is-link size="large">
     <view slot="title">
-      <image class='list-icon2' mode="aspectFit" src="/img/icon-1.png"></image>
+      <image class='list-icon2' mode="aspectFit" src="/img/icon-unbind.png"></image>
       <text class="van-cell-text">解绑身份</text>
     </view>
   </van-cell>
   <van-cell size="large">
     <view slot="title">
-      <image class='list-icon2' mode="aspectFit" src="/img/icon-6.png"></image>
+      <image class='list-icon2' mode="aspectFit" src="/img/icon-version.png"></image>
       <text class="van-cell-text">程序版本： 1.3.0</text>
     </view>
   </van-cell>
   <view class="me-itemband">
     <van-cell bindtap="toBlacklist" is-link size="large">
       <view slot="title">
-        <image class='list-icon2' mode="aspectFit" src="/img/bell-1.png"></image>
+        <image class='list-icon2' mode="aspectFit" src="/img/icon-nop.png"></image>
         <text class="van-cell-text">禁评名单</text>
       </view>
     </van-cell>
     <van-cell bindtap="toRecords" is-link size="large">
       <view slot="title">
-        <image class='list-icon2' mode="aspectFit" src="/img/icon-2.png"></image>
+        <image class='list-icon2' mode="aspectFit" src="/img/icon-record.png"></image>
         <text class="van-cell-text">评价记录</text>
       </view>
     </van-cell>
     <van-cell bindtap="todongtai" is-link size="large">
       <view slot="title">
-        <image class='list-icon2' mode="aspectFit" src="/img/icon-2.png"></image>
+        <image class='list-icon2' mode="aspectFit" src="/img/icon-dongtai.png"></image>
         <text class="van-cell-text">评价动态</text>
       </view>
     </van-cell>

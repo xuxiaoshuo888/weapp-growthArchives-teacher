@@ -6,8 +6,8 @@ Page({
    */
   data: {
     list:[
-      {name:"评价打分",id:0,url:"/pages/txl/txl",img:"/img/sz.png"},
-      {name:"个人排行",id:1,url:"/pages/range/range",img:"/img/sz.png"}
+      {name:"评价打分",id:0,url:"/pages/txl/txl",img:"/img/icon-df.png"},
+      {name:"个人排行",id:1,url:"/pages/range/range",img:"/img/icon-range.png"}
     ]
   },
 

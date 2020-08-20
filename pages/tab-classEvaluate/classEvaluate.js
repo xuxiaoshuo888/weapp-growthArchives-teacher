@@ -6,8 +6,8 @@ Page({
    */
   data: {
     list:[
-      {name:"评价打分",id:0,url:"./evaluate-detail",img:"/img/sz.png"},
-      {name:"班级排行",id:1,url:"./range-detail",img:"/img/sz.png"}
+      {name:"评价打分",id:0,url:"./evaluate-detail",img:"/img/icon-df.png"},
+      {name:"班级排行",id:1,url:"./range-detail",img:"/img/icon-range.png"}
     ]
   },
 

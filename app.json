@@ -22,7 +22,8 @@
     "van-icon": "./miniprogram_npm/@vant/weapp/icon/index",
     "van-popup": "./miniprogram_npm/@vant/weapp/popup/index",
     "van-swipe-cell": "./miniprogram_npm/@vant/weapp/swipe-cell/index",
-    "van-progress": "./miniprogram_npm/@vant/weapp/progress/index"
+    "van-progress": "./miniprogram_npm/@vant/weapp/progress/index",
+    "van-dialog": "./miniprogram_npm/@vant/weapp/dialog/index"
   },
   "pages": [
     "pages/index/index",
@@ -49,7 +50,10 @@
     "pages/tab-classEvaluate/classEvaluate",
     "pages/tab-punishManage/punishManage",
     "pages/tab-classEvaluate/evaluate-detail",
-    "pages/tab-classEvaluate/range-detail"
+    "pages/tab-classEvaluate/range-detail",
+    "pages/tab-punishManage/punish-add",
+    "pages/tab-punishManage/punish-approval",
+    "pages/tab-punishManage/punish-record"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -71,8 +75,8 @@
       {
         "pagePath": "pages/tab-classEvaluate/classEvaluate",
         "text": "班级评价",
-        "iconPath": "img/dt1.png",
-        "selectedIconPath": "img/dt2.png"
+        "iconPath": "img/bjpj1.png",
+        "selectedIconPath": "img/bjpj2.png"
       },
       {
         "pagePath": "pages/tab-punishManage/punishManage",
