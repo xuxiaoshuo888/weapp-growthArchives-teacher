@@ -1,1 +1,7 @@
 /* pages/tab-classEvaluate/range-detail.wxss */
+.xnxq .van-cell__title{
+  flex: 0 0 90px;
+}
+.xnxq .van-cell__value{
+  flex: 1 1 auto;
+}

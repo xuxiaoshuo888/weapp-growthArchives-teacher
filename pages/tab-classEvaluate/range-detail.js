@@ -11,30 +11,176 @@ Page({
     nj: 0,
     bj: 0,
     week: 0,
+    list: [{
+        bjname: '一年级一班',
+        options: [{
+            title: '行动',
+            img: '/img/xd-a.png',
+            score: 29
+          },
+          {
+            title: '课间',
+            img: '/img/kj-a.png',
+            score: 28
+          },
+          {
+            title: '保护',
+            img: '/img/bh-a.png',
+            score: 25
+          },
+          {
+            title: '卫生',
+            img: '/img/ws-a.png',
+            score: 23
+          },
+          {
+            title: '体检',
+            img: '/img/tj-a.png',
+            score: 26
+          }
+        ]
+      },
+      {
+        bjname: '一年级二班',
+        options: [{
+            title: '行动',
+            img: '/img/xd-a.png',
+            score: 14
+          },
+          {
+            title: '课间',
+            img: '/img/kj-a.png',
+            score: 38
+          },
+          {
+            title: '保护',
+            img: '/img/bh-a.png',
+            score: 15
+          },
+          {
+            title: '卫生',
+            img: '/img/ws-a.png',
+            score: 13
+          },
+          {
+            title: '体检',
+            img: '/img/tj-a.png',
+            score: 16
+          }
+        ]
+      },
+      {
+        bjname: '二年级一班',
+        options: [{
+            title: '行动',
+            img: '/img/xd-a.png',
+            score: 19
+          },
+          {
+            title: '课间',
+            img: '/img/kj-a.png',
+            score: 24
+          },
+          {
+            title: '保护',
+            img: '/img/bh-a.png',
+            score: 21
+          },
+          {
+            title: '卫生',
+            img: '/img/ws-a.png',
+            score: 20
+          },
+          {
+            title: '体检',
+            img: '/img/tj-a.png',
+            score: 25
+          }
+        ]
+      },
+      {
+        bjname: '三年级四班',
+        options: [{
+            title: '行动',
+            img: '/img/xd-a.png',
+            score: 40
+          },
+          {
+            title: '课间',
+            img: '/img/kj-a.png',
+            score: 18
+          },
+          {
+            title: '保护',
+            img: '/img/bh-a.png',
+            score: 15
+          },
+          {
+            title: '卫生',
+            img: '/img/ws-a.png',
+            score: 22
+          },
+          {
+            title: '体检',
+            img: '/img/tj-a.png',
+            score: 25
+          }
+        ]
+      },
+      {
+        bjname: '四年级一班',
+        options: [{
+            title: '行动',
+            img: '/img/xd-a.png',
+            score: 33
+          },
+          {
+            title: '课间',
+            img: '/img/kj-a.png',
+            score: 21
+          },
+          {
+            title: '保护',
+            img: '/img/bh-a.png',
+            score: 11
+          },
+          {
+            title: '卫生',
+            img: '/img/ws-a.png',
+            score: 6
+          },
+          {
+            title: '体检',
+            img: '/img/tj-a.png',
+            score: 46
+          }
+        ]
+      },
+    ],
     options: [{
         title: '行动',
         img: '/img/xd-a.png',
-        score:29
+        score: 29
       },
       {
         title: '课间',
         img: '/img/kj-a.png',
-        score:28
+        score: 28
       },
       {
         title: '保护',
         img: '/img/bh-a.png',
-        score:25
+        score: 25
       },
       {
         title: '卫生',
         img: '/img/ws-a.png',
-        score:23
+        score: 23
       },
       {
         title: '体检',
         img: '/img/tj-a.png',
-        score:26
+        score: 26
       }
     ],
     activeIndex: null

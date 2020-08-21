@@ -181,7 +181,7 @@ letter-spacing: 0px;
   line-height: 22px;
 }
 .punish-img-view{
-  padding: 0 16px 10px 16px;
+  padding: 10px 16px 10px 16px;
   background-color: #fff;
 }
 .punish-img-view>image{

@@ -16,14 +16,12 @@
   				<view class="choosen-text-color">{{bjlist[bj]}}</view>
   			</van-cell>
   		</picker>
-  		<picker bindchange="choose" data-tag="week" range="{{weeklist}}">
-  			<van-cell bindtap="toNext" is-link size="large">
-  				<view slot="title">
-  					<text class="van-cell-text">选择学生</text>
-  				</view>
-  				<view class="choosen-text-color">{{weeklist[week]}}</view>
-  			</van-cell>
-  		</picker>
+  		<van-cell bindtap="tostd" is-link size="large">
+  			<view slot="title">
+  				<text class="van-cell-text">选择学生</text>
+  			</view>
+  			<view class="choosen-text-color">{{std_text}}</view>
+  		</van-cell>
   	</van-cell-group>
   	<view class="use-page-noheight">
   		<van-cell-group style="background-color:rgba(255,255,255,0);">
@@ -32,7 +30,7 @@
   			</van-field>
   		</van-cell-group>
   	</view>
-		<view class="use-page-noheight">
+  	<view class="use-page-noheight">
   		<van-cell-group style="background-color:rgba(255,255,255,0);">
   			<view class="textarea-title"><text class="van-cell-text">任务说明</text></view>
   			<van-field v-model="message" rows="5" type="textarea" autosize="{{autosize}}" placeholder="请输入解除惩罚的任务说明">

@@ -47,6 +47,7 @@ Page({
         reason: "打架",
         task: "完成古诗默写",
         condition: "已按照老师要求完成任务",
+        percentage:75,
         imglist: [{
           src: '/img/punish-std1.png',
           name: '赵敏',
@@ -58,7 +59,7 @@ Page({
         },{
           src: '/img/punish-std3.png',
           name: '曾阿牛',
-          status:0
+          status:1
         },{
           src: '/img/punish-std4.png',
           name: '阳顶天',
@@ -73,25 +74,26 @@ Page({
         img: "/img/icon-student.png",
         status: 1,
         time: "2020-08-10 9:00",
-        reason: "打架",
+        reason: "多次迟到",
         task: "完成古诗默写",
         condition: "已按照老师要求完成任务",
+        percentage:100,
         imglist: [{
           src: '/img/punish-std1.png',
-          name: '赵敏',
+          name: '黄蓉',
           status:1
         },{
           src: '/img/punish-std2.png',
-          name: '周芷若',
+          name: '小龙女',
           status:1
         },{
           src: '/img/punish-std3.png',
-          name: '曾阿牛',
-          status:0
+          name: '郭靖',
+          status:1
         },{
           src: '/img/punish-std4.png',
-          name: '阳顶天',
-          status:0
+          name: '周伯通',
+          status:1
         }]
       },
       {
@@ -105,21 +107,22 @@ Page({
         reason: "打架",
         task: "完成古诗默写",
         condition: "已按照老师要求完成任务",
+        percentage:50,
         imglist: [{
           src: '/img/punish-std1.png',
-          name: '赵敏',
+          name: '王语嫣',
           status:1
         },{
           src: '/img/punish-std2.png',
-          name: '周芷若',
+          name: '阿紫',
           status:1
         },{
           src: '/img/punish-std3.png',
-          name: '曾阿牛',
+          name: '段誉',
           status:0
         },{
           src: '/img/punish-std4.png',
-          name: '阳顶天',
+          name: '虚竹',
           status:0
         }]
       }

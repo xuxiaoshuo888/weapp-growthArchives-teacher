@@ -11,6 +11,7 @@ Page({
     nj: 0,
     bj: 0,
     week: 0,
+    std_text:"",
     options: [{
         title: '行动',
         img: '/img/jiangzhang.png'
@@ -40,7 +41,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options)
+    if(options.text){
+      this.setData({
+        std_text:options.text
+      })
+    }
   },
 
   /**
@@ -118,5 +124,10 @@ Page({
         icon: 'none'
       })
     }, 2000)
+  },
+  tostd(){
+    wx.navigateTo({
+      url: './punish-add-std',
+    })
   }
 })

@@ -44,7 +44,7 @@
   			</van-cell>
   			<van-cell class="punish-approval punish-approval-subtitle" center title="完成占比" size="large">
   				<view style="padding-right:30px;">
-  					<van-progress percentage="50" stroke-width="12" pivot-text="50%" pivot-color="#41B65A" pivot-text="50%" color="#41B65A" />
+  					<van-progress percentage="{{item.percentage}}" stroke-width="12" pivot-color="#41B65A" color="#41B65A" />
   				</view>
   				<view slot="right-icon">
   					<van-icon name="arrow-down" />

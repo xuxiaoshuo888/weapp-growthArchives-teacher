@@ -1,5 +1,5 @@
   <view class="bg1 use-page">
-  	<van-cell-group style="background-color:rgba(255,255,255,0);">
+  	<van-cell-group class="xnxq" style="background-color:rgba(255,255,255,0);">
   		<picker bindchange="choose" data-tag="nj" range="{{njlist}}">
   			<van-cell bindtap="toNext" is-link size="large">
   				<view slot="title">
@@ -25,83 +25,15 @@
   			</van-cell>
   		</picker>
   	</van-cell-group>
-  	<view class="use-page-noheight">
+  	<view class="use-page-noheight" wx:for="{{list}}" wx:key="index" wx:for-item="bj">
   		<van-cell-group class="medal-list-show" style="background-color:rgba(255,255,255,0);">
   			<van-cell size="large">
   				<view slot="title">
-  					<text class="van-cell-text">一年级一班</text>
+  					<text class="van-cell-text">{{bj.bjname}}</text>
   				</view>
   			</van-cell>
   			<view class="weui-flex medal-list">
-  				<view class="weui-flex__item medal-list-view" wx:for="{{options}}" wx:key="index">
-            <text class="medal-list-item-score">{{item.score}}</text>
-  					<image class="medal-list-item-img" src="{{item.img}}" mode="aspectFit"></image>
-  					<text class="medal-list-item-title">{{item.title}}</text>
-  				</view>
-  			</view>
-  		</van-cell-group>
-  	</view>
-
-    <view class="use-page-noheight">
-  		<van-cell-group class="medal-list-show" style="background-color:rgba(255,255,255,0);">
-  			<van-cell size="large">
-  				<view slot="title">
-  					<text class="van-cell-text">一年级二班</text>
-  				</view>
-  			</van-cell>
-  			<view class="weui-flex medal-list">
-  				<view class="weui-flex__item medal-list-view" wx:for="{{options}}" wx:key="index">
-            <text class="medal-list-item-score">{{item.score}}</text>
-  					<image class="medal-list-item-img" src="{{item.img}}" mode="aspectFit"></image>
-  					<text class="medal-list-item-title">{{item.title}}</text>
-  				</view>
-  			</view>
-  		</van-cell-group>
-  	</view>
-
-    <view class="use-page-noheight">
-  		<van-cell-group class="medal-list-show" style="background-color:rgba(255,255,255,0);">
-  			<van-cell size="large">
-  				<view slot="title">
-  					<text class="van-cell-text">一年级三班</text>
-  				</view>
-  			</van-cell>
-  			<view class="weui-flex medal-list">
-  				<view class="weui-flex__item medal-list-view" wx:for="{{options}}" wx:key="index">
-            <text class="medal-list-item-score">{{item.score}}</text>
-  					<image class="medal-list-item-img" src="{{item.img}}" mode="aspectFit"></image>
-  					<text class="medal-list-item-title">{{item.title}}</text>
-  				</view>
-  			</view>
-  		</van-cell-group>
-  	</view>
-
-    <view class="use-page-noheight">
-  		<van-cell-group class="medal-list-show" style="background-color:rgba(255,255,255,0);">
-  			<van-cell size="large">
-  				<view slot="title">
-  					<text class="van-cell-text">一年级四班</text>
-  				</view>
-  			</van-cell>
-  			<view class="weui-flex medal-list">
-  				<view class="weui-flex__item medal-list-view" wx:for="{{options}}" wx:key="index">
-            <text class="medal-list-item-score">{{item.score}}</text>
-  					<image class="medal-list-item-img" src="{{item.img}}" mode="aspectFit"></image>
-  					<text class="medal-list-item-title">{{item.title}}</text>
-  				</view>
-  			</view>
-  		</van-cell-group>
-  	</view>
-
-    <view class="use-page-noheight">
-  		<van-cell-group class="medal-list-show" style="background-color:rgba(255,255,255,0);">
-  			<van-cell size="large">
-  				<view slot="title">
-  					<text class="van-cell-text">一年级五班</text>
-  				</view>
-  			</van-cell>
-  			<view class="weui-flex medal-list">
-  				<view class="weui-flex__item medal-list-view" wx:for="{{options}}" wx:key="index">
+  				<view class="weui-flex__item medal-list-view" wx:for="{{bj.options}}" wx:key="index">
             <text class="medal-list-item-score">{{item.score}}</text>
   					<image class="medal-list-item-img" src="{{item.img}}" mode="aspectFit"></image>
   					<text class="medal-list-item-title">{{item.title}}</text>

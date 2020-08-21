@@ -53,7 +53,8 @@
     "pages/tab-classEvaluate/range-detail",
     "pages/tab-punishManage/punish-add",
     "pages/tab-punishManage/punish-approval",
-    "pages/tab-punishManage/punish-record"
+    "pages/tab-punishManage/punish-record",
+    "pages/tab-punishManage/punish-add-std"
   ],
   "window": {
     "backgroundTextStyle": "light",

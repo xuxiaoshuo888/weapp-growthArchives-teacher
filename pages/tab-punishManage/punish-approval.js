@@ -35,9 +35,9 @@ Page({
     activeIndex: null,
     autosize:{ maxHeight: 200, minHeight: 80 },
     list:[
-      {name:"刘刚",id:0,bj:'一年级一班',url:"./punish-add",img:"/img/icon-student.png",status:0,reason:"打架",task:"完成古诗默写",condition:"已按照老师要求完成任务",imglist:['/img/punish-fj1.png','/img/punish-std3.png','/img/punish-fj3.png']},
-      {name:"张丽丽",id:1,bj:'二年级三班',url:"./punish-approval",img:"/img/icon-student.png",status:1,reason:"打架",task:"完成古诗默写",condition:"已按照老师要求完成任务",imglist:['/img/punish-fj1.png','/img/punish-std3.png','/img/punish-fj3.png']},
-      {name:"王智",id:1,bj:'四年级五班',url:"./punish-record",img:"/img/icon-student.png",status:2,reason:"打架",task:"完成古诗默写",condition:"已按照老师要求完成任务",imglist:['/img/punish-fj1.png','/img/punish-std3.png','/img/punish-fj3.png']}
+      {name:"刘刚",id:0,bj:'一年级一班',url:"./punish-add",img:"/img/icon-student.png",status:0,reason:"打架",task:"完成古诗默写",condition:"正在完成任务",imglist:['/img/punish-std3.png','/img/punish-fj3.png']},
+      {name:"张丽丽",id:1,bj:'二年级三班',url:"./punish-approval",img:"/img/icon-student.png",status:1,reason:"上课讲小话",task:"背诵文言文",condition:"已按照老师要求完成任务",imglist:['/img/punish-fj1.png','/img/punish-fj3.png']},
+      {name:"王智",id:1,bj:'四年级五班',url:"./punish-record",img:"/img/icon-student.png",status:2,reason:"打架",task:"默写英文单词",condition:"未完成任务",imglist:['/img/punish-std4.png','/img/punish-fj3.png']}
     ],
     show:false,
     autosize:{ maxHeight: 200, minHeight: 100 }
